@@ -1,0 +1,32 @@
+*{background-color: #F1F0E8; 
+    font-family: Schoolbell;
+    color: #222831;    
+}
+
+
+.div_p{margin-top: 5px; 
+    text-align: right;
+    font-size:smaller;
+}
+
+#p_profile {
+    width: 100%;
+    height: auto;
+    padding: 0px 0px;
+}
+
+.div_m{height: auto; width: 100%;
+    display: flex;}
+
+.div_s{height: auto; width: 30%;
+    font-size: smaller;
+    text-align: right;
+    margin: 20px;
+}
+
+.img_p{ height: auto; width: 100%;
+    border: 3px dashed #31363F;
+    padding: 5px;}
+
+
+
