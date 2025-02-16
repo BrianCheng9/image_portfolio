@@ -18,7 +18,7 @@
 .menu{
     display: flex; 
     align-items: center;"
-    font-size: 14px
+    font-size: smaller
 }
 
 .div_m{height: auto; width: 100%;
