@@ -98,3 +98,21 @@ footer p{
 
 }
 
+@media (max-width: 680px) {
+    .div_m {
+        flex-direction: column; 
+        align-items: center; 
+    }
+
+    .div_s {
+        width: 90%; 
+        text-align: center; 
+        margin: 20px 0; 
+    }
+
+
+    .div_menu {
+        width: 100%; 
+        text-align: right; 
+    }
+}
