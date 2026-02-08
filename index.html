@@ -1,116 +1,131 @@
-/* --- BRIAN JM PHOTOGRAPHY: ULTIMATE IMPACT STYLE --- */
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brian JM | Image Portfolio</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&family=Schoolbell&family=ZCOOL+QingKe+HuangYou&display=swap" rel="stylesheet">
+</head>
+<body>
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    -webkit-font-smoothing: antialiased;
-}
+    <div class="div_p">
+        <img id="p_profile" src="./asset/images/DJI_0115.JPG" alt="Hero Image">
+        <p>Wicklow County, Ireland</p>
+        <h1>Image Portfolio</h1>
+    </div>
 
-body {
-    background-color: #EBE8E2; /* Textured Linen Background */
-    font-family: 'Inter', -apple-system, sans-serif;
-    color: #0a1a2b;
-    line-height: 1.6;
-}
+    <div class="div_menu">
+        <a href="./asset/author.html">About the Photographer</a>
+    </div>
 
-/* --- 1. FULL-WIDTH HERO SECTION --- */
-.div_p {
-    padding: 0;
-    position: relative;
-    background-color: #0a1a2b;
-}
+    <div class="div_m">
+        <div class="div_s">
+            <img class="img_p" src="./asset/images/IMG_1402.JPEG">
+            <p>Fuxian lake, Yunnan</p>
+        </div>
 
-#p_profile {
-    width: 100%;
-    height: 90vh;
-    object-fit: cover;
-    display: block;
-    filter: brightness(0.65); 
-}
+        <div class="div_s">
+            <img class="img_p" src="./asset/images/IMG_2439.JPEG">
+            <p>Dali, Yunnan</p>
+        </div>
 
-.div_p h1 {
-    position: absolute;
-    bottom: 80px;
-    left: 8%;
-    color: #ffffff;
-    font-size: clamp(3.5rem, 12vw, 7.5rem);
-    font-weight: 900;
-    letter-spacing: -4px;
-    line-height: 0.85;
-    text-shadow: 0 10px 50px rgba(0,0,0,0.5);
-}
+        <div class="div_s">
+            <img class="img_p" src="./asset/images/IMG_2495.JPEG">
+            <p>Cang Mountain, Yunnan</p>
+        </div>
+    </div>
 
-.div_p p {
-    position: absolute;
-    top: 40px;
-    left: 8%;
-    color: #c5a368; 
-    font-weight: 800;
-    text-transform: uppercase;
-    letter-spacing: 5px;
-    font-size: 0.8rem;
-}
+    <div class="div_m">
+        <div class="div_s">
+            <img class="img_p" src="./asset/images/IMG_0580.JPG">
+            <p>Siem Reap, Cambodia</p>
+        </div>
 
-/* --- 2. NAVIGATION --- */
-.div_menu {
-    padding: 35px 8%;
-    background: #0a1a2b;
-    width: 100%;
-    display: flex;
-    justify-content: flex-end;
-}
+        <div class="div_s">
+            <img class="img_p" src="./asset/images/IMG_20160316_142005.jpg">
+            <p>Marina Bay, Singapore</p>
+        </div>
 
-.div_menu > a {
-    color: #ffffff;
-    text-decoration: none;
-    font-weight: 700;
-    font-size: 0.85rem;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    border: 1px solid rgba(255,255,255,0.3);
-    padding: 12px 35px;
-}
+        <div class="div_s">
+            <img class="img_p" src="./asset/images/Thames.jpg">
+            <p>River Thames, UK</p>
+        </div>
+    </div>
 
-.div_menu a:hover {
-    background-color: #ffffff;
-    color: #0a1a2b;
-}
+    <div class="div_m">
+        <div class="div_s">
+            <img class="img_p" src="./asset/images/IMG_0211.JPG">
+            <p>Nathan Road, Hong Kong</p>
+        </div>
 
-/* --- 3. GALLERY: MASSIVE FLOAT & SCALE (核心優化) --- */
-.div_m {
-    display: flex;
-    padding: 150px 8%; /* 增加間距防止圖片上浮後遮擋上方 */
-    gap: 60px;
-}
+        <div class="div_s">
+            <img class="img_p" src="./asset/images/IMG_0612.JPG">
+            <p>Siem Reap, Cambodia</p>
+        </div>
 
-.div_s {
-    flex: 1;
-    /* 確保上浮時不會被旁邊的圖片壓住層級 */
-    position: relative;
-    z-index: 1;
-}
+        <div class="div_s">
+            <img class="img_p" src="./asset/images/mmexport1535340970054.jpg">
+            <p>Somewhere in South America</p>
+        </div>
+    </div>
 
-.img_p {
-    width: 100%;
-    aspect-ratio: 4 / 5;
-    object-fit: cover;
-    /* 這裡使用更強大的動畫曲線 */
-    transition: transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.6s ease;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-}
+    <div class="div_m">
+        <div class="div_s">
+            <img class="img_p" src="./asset/images/croatia1.jpg">
+            <p>Dubrovnik, Croatia</p>
+        </div>
 
-/* 強化的上浮效果 */
-.div_s:hover {
-    z-index: 10; /* 懸浮時置於最頂層 */
-}
+        <div class="div_s">
+            <img class="img_p" src="./asset/images/croatia2.jpg">
+            <p>Dubrovnik, Croatia</p>
+        </div>
 
-.div_s:hover .img_p {
-    /* 力度調大：上浮 50px，同時縮放變大到 1.15 倍 */
-    transform: translateY(-50px) scale(1.15); 
-    /* 增加深邃陰影，強化離地感 */
-    box-shadow: 0 70px 100px rgba(0,0,0,0.4); 
-    /* 刪除變亮效果，保持原圖色彩質感 */
-}
+        <div class="div_s">
+            <img class="img_p" src="./asset/images/netherlands.jpg">
+            <p>Heerlijck Slaapen op de Zaanse Schans</p>
+        </div>
+    </div>
 
-.
+    <div class="div_m">
+        <div class="div_s">
+            <img class="img_p" src="./asset/images/DJI_0027.JPG">
+            <p>Lake Brienz, Switzerland</p>
+        </div>
+
+        <div class="div_s">
+            <img class="img_p" src="./asset/images/DJI_0059.JPG">
+            <p>Chenggong, Yunnan</p>
+        </div>
+
+        <div class="div_s">
+            <img class="img_p" src="./asset/images/DJI_0127.JPG">
+            <p>Glendalough, Wicklow</p>
+        </div>
+    </div>
+
+    <div class="div_m">
+        <div class="div_s">
+            <img class="img_p" src="./asset/images/DJI_0123.JPG">
+            <p>Glendalough, Wicklow</p>
+        </div>
+
+        <div class="div_s">
+            <img class="img_p" src="./asset/images/DJI_0137.JPG">
+            <p>Bray, Dublin</p>
+        </div>
+
+        <div class="div_s">
+            <img class="img_p" src="./asset/images/DJI_0041.JPG">
+            <p>Grindelwald, Switzerland</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2025 Brian JM</p>
+    </footer>
+
+</body>
+</html>
