@@ -1,141 +1,225 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Schoolbell&family=ZCOOL+QingKe+HuangYou&display=swap" rel="stylesheet">
-</head>
-<body>
-        <div class="div_p">
-            <img id="p_profile" src="./asset/images/DJI_0115.JPG"></img>
-            <p>Wicklow County, Ireland</p>
-            <br>
-            <h1>Image Portfolio</h1>
+/* PROJECT: BRIAN JM PHOTOGRAPHY PORTFOLIO (EXECUTIVE EDITION)
+   STYLE: FRANCISCO PARTNERS INSPIRED / HIGH-FLOAT INTERACTION
+*/
 
-            <div class="div_menu">
-                <a href="./asset/author.html">About the Photographer</a>
-    
-            </div>
-            <hr>
-        </div>  
+/* --- 1. GLOBAL RESET & FOUNDATION --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+}
 
+body {
+    /* Premium Linen Texture Background */
+    background-color: #EBE8E2; 
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    color: #0a1a2b; /* Francisco Navy */
+    line-height: 1.6;
+    overflow-x: hidden;
+}
 
-        <div class="div_m">
-            <div class="div_s">
-                <img class="img_p" src="./asset/images/IMG_1402.JPEG"></img>    
-                <p>Fuxian lake, Yunnan</p> 
-            </div>
-    
-            <div class="div_s">
-                <img class="img_p" src="./asset/images/IMG_2439.JPEG"></img>    
-                <p>Dali, Yunnan</p> 
-            </div>
-    
-            <div class="div_s">
-                <img class="img_p" src="./asset/images/IMG_2495.JPEG"></img>    
-                <p>Cang Mountain, Yunnan</p> 
-            </div>
-        </div>
+/* --- 2. FULL-BLEED HERO SECTION (index.html) --- */
+.div_p {
+    padding: 0;
+    text-align: left;
+    position: relative;
+    background-color: #0a1a2b;
+}
 
+#p_profile {
+    width: 100%;
+    height: 90vh;
+    object-fit: cover;
+    display: block;
+    filter: brightness(0.65); /* Darker overlay for text readability */
+}
 
-        <div class="div_m">
-            <div class="div_s">
-                <img class="img_p" src="./asset/images/IMG_0580.JPG"></img>    
-                <p>Siem Reap, Canbodia</p> 
-            </div>
-    
-            <div class="div_s">
-                <img class="img_p" src="./asset/images/IMG_20160316_142005.jpg"></img>    
-                <p>Marina Bay, Singapore</p> 
-            </div>
-    
-            <div class="div_s">
-                <img class="img_p" src="./asset/images/Thames.jpg"></img>    
-                <p>River Thames, UK</p> 
-            </div>
-        </div>
+.div_p h1 {
+    position: absolute;
+    bottom: 80px;
+    left: 8%;
+    color: #ffffff;
+    font-size: clamp(3.5rem, 12vw, 7.5rem);
+    font-weight: 900;
+    letter-spacing: -4px;
+    line-height: 0.85;
+    text-shadow: 0 10px 50px rgba(0,0,0,0.5);
+}
 
-        <div class="div_m">
-            <div class="div_s">
-                <img class="img_p" src="./asset/images/IMG_0211.JPG"></img>    
-                <p>Nathan Road, Hongkong</p> 
-            </div>
-    
-            <div class="div_s">
-                <img class="img_p" src="./asset/images/IMG_0612.JPG"></img>    
-                <p>Siem Reap, Canbodia</p> 
-            </div>
-    
-            <div class="div_s">
-                <img class="img_p" src="./asset/images/mmexport1535340970054.jpg"></img>    
-                <p>Somewhere in South America</p> 
-            </div>
-        </div>
+/* Subtitle on Hero Image */
+.div_p p {
+    position: absolute;
+    top: 40px;
+    left: 8%;
+    color: #c5a368; /* Executive Gold Accent */
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 0.8rem;
+}
 
-        <div class="div_m">
-            <div class="div_s">
-                <img class="img_p" src="./asset/images/croatia1.jpg"></img>    
-                <p>Dubrovnik, Croatia</p> 
-            </div>
-    
-            <div class="div_s">
-                <img class="img_p" src="./asset/images/croatia2.jpg"></img>    
-                <p>Dubrovnik, Croatia</p> 
-            </div>
-    
-            <div class="div_s">
-                <img class="img_p" src="./asset/images/netherlands.jpg"></img>    
-                <p>Heerlijck Slaapen op de Zaanse Schans</p> 
-            </div>
-    
-        </div>
+/* --- 3. CORPORATE NAVIGATION BAR --- */
+.div_menu {
+    padding: 35px 8%;
+    background: #0a1a2b;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
 
+.div_menu > a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border: 1px solid rgba(255,255,255,0.3);
+    padding: 12px 35px;
+    transition: all 0.3s ease;
+}
 
+.div_menu a:hover {
+    background-color: #ffffff;
+    color: #0a1a2b;
+    transform: translateY(-2px);
+}
 
-        <div class="div_m">
-            <div class="div_s">
-                <img class="img_p" src="./asset/images/DJI_0027.JPG"></img>    
-                <p>Lake Brienz, Switzerland</p> 
-            </div>
+/* --- 4. GALLERY: EXTREME FLOAT INTERACTION --- */
+.div_m {
+    display: flex;
+    padding: 140px 8%;
+    gap: 60px;
+}
 
-            <div class="div_s">
-                <img class="img_p" src="./asset/images/DJI_0059.JPG"></img>    
-                <p>Chenggong, Yunnan</p> 
-            </div>
+.div_s {
+    flex: 1;
+    transition: z-index 0.3s;
+}
 
-            <div class="div_s">
-                <img class="img_p" src="./asset/images/DJI_0127.JPG"></img>    
-                <p>Glendalough, Wicklow</p> 
-            </div>
+.img_p {
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+    /* Use a sharp, expensive-feeling transition curve */
+    transition: all 0.7s cubic-bezier(0.19, 1, 0.22, 1); 
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
 
-        </div>
+/* THE EXTREME FLOAT EFFECT (-45px) */
+.div_s:hover .img_p {
+    transform: translateY(-45px) scale(1.06); 
+    box-shadow: 0 60px 120px rgba(0,0,0,0.35); /* Deep Cinematic Shadow */
+    filter: contrast(1.05) brightness(1.05);
+}
 
+.div_s p {
+    margin-top: 35px;
+    font-weight: 900;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #0a1a2b;
+}
 
-        <div class="div_m">
-            <div class="div_s">
-                <img class="img_p" src="./asset/images/DJI_0123.JPG"></img>    
-                <p>Glendalough, Wicklow</p> 
-            </div>
+/* --- 5. AUTHOR PROFILE PAGE (author.html) --- */
+.p_menu {
+    display: flex;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 140px 8%;
+    gap: 120px;
+    align-items: center; /* Vertical Center Align */
+}
 
-            <div class="div_s">
-                <img class="img_p" src="./asset/images/DJI_0137.JPG"></img>    
-                <p>Brey, Dublin</p> 
-            </div>
+.left h1 {
+    font-size: 5.5rem;
+    font-weight: 900;
+    letter-spacing: -4px;
+    line-height: 0.95;
+    margin-bottom: 20px;
+}
 
-            <div class="div_s">
-                <img class="img_p" src="./asset/images/DJI_0041.JPG"></img>    
-                <p>Grindelwald</p> 
-            </div>
+/* The "Dublin" Blue Call-out Box */
+.left p {
+    display: inline-block;
+    background-color: #0a1a2b;
+    color: #ffffff !important;
+    padding: 14px 28px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 0.85rem;
+    margin-top: 25px;
+    border-radius: 0; /* Sharp corporate edges */
+}
 
-        </div>
-    
-        <footer>
-            <p>© 2025 Brian JM</p>
-        </footer>
-</body>
-</html>
+/* CIRCULAR PROFILE IMAGE SETTINGS */
+.right {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.right img {
+    width: 480px;
+    height: 480px;
+    object-fit: cover;
+    border-radius: 50%; /* Perfect Circle */
+    border: 15px solid #ffffff; /* Thick Gallery Frame */
+    box-shadow: 0 40px 80px rgba(0,0,0,0.15);
+    transition: transform 0.6s ease;
+}
+
+.right img:hover {
+    transform: rotate(2deg) scale(1.02);
+}
+
+/* Bio Content List */
+.menu li {
+    list-style: none;
+    margin-top: 50px;
+    border-top: 2px solid #0a1a2b;
+    padding-top: 25px;
+}
+
+.menu li p {
+    background-color: transparent !important; /* Reset for general text */
+    color: #334155 !important;
+    padding: 0;
+    text-transform: none;
+    letter-spacing: 0;
+    font-size: 1.2rem;
+    line-height: 1.8;
+}
+
+/* --- 6. FOOTER --- */
+footer {
+    background: #0a1a2b;
+    padding: 120px 8% 60px 8%;
+}
+
+footer p {
+    background: transparent !important;
+    color: rgba(255,255,255,0.4) !important;
+    letter-spacing: 8px;
+    font-size: 0.7rem;
+    text-align: left;
+    text-transform: uppercase;
+}
+
+/* --- 7. RESPONSIVE DESIGN --- */
+@media (max-width: 1200px) {
+    .p_menu { gap: 60px; }
+    .left h1 { font-size: 4rem; }
+    .right img { width: 350px; height: 350px; }
+}
+
+@media (max-width: 900px) {
+    .p_menu { flex-direction: column; text-align: center; }
+    .div_m { flex-direction: column; padding: 60px 8%; }
+    .div_s { width: 100%; margin: 40px 0; }
+    .right img { width: 300px; height: 300px; }
+    #p_profile { height: 60vh; }
+}
