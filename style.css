@@ -1,8 +1,5 @@
-/* PROJECT: BRIAN JM PHOTOGRAPHY PORTFOLIO (EXECUTIVE EDITION)
-   STYLE: FRANCISCO PARTNERS INSPIRED / HIGH-FLOAT INTERACTION
-*/
+/* --- Executive Gallery Style v2.0 --- */
 
-/* --- 1. GLOBAL RESET & FOUNDATION --- */
 * {
     margin: 0;
     padding: 0;
@@ -11,20 +8,19 @@
 }
 
 body {
-    /* Premium Linen Texture Background */
-    background-color: #EBE8E2; 
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-    color: #0a1a2b; /* Francisco Navy */
+    /* High-quality textured background (Very light cool grey) */
+    background-color: #F2F4F7; 
+    font-family: 'Inter', -apple-system, sans-serif;
+    color: #0a1a2b;
     line-height: 1.6;
-    overflow-x: hidden;
 }
 
-/* --- 2. FULL-BLEED HERO SECTION (index.html) --- */
+/* --- 1. FULL-WIDTH HERO SECTION --- */
 .div_p {
     padding: 0;
     text-align: left;
     position: relative;
-    background-color: #0a1a2b;
+    background-color: #0a1a2b; /* Dark base for transition */
 }
 
 #p_profile {
@@ -32,7 +28,8 @@ body {
     height: 90vh;
     object-fit: cover;
     display: block;
-    filter: brightness(0.65); /* Darker overlay for text readability */
+    /* Subtle darken to make overlay text readable */
+    filter: brightness(0.75); 
 }
 
 .div_p h1 {
@@ -40,186 +37,152 @@ body {
     bottom: 80px;
     left: 8%;
     color: #ffffff;
-    font-size: clamp(3.5rem, 12vw, 7.5rem);
+    font-size: clamp(3.5rem, 12vw, 7rem);
     font-weight: 900;
-    letter-spacing: -4px;
-    line-height: 0.85;
-    text-shadow: 0 10px 50px rgba(0,0,0,0.5);
+    letter-spacing: -3px;
+    line-height: 0.9;
+    text-shadow: 0 10px 30px rgba(0,0,0,0.5);
 }
 
-/* Subtitle on Hero Image */
 .div_p p {
     position: absolute;
     top: 40px;
     left: 8%;
-    color: #c5a368; /* Executive Gold Accent */
+    color: #c5a368; /* Executive Gold */
     font-weight: 800;
     text-transform: uppercase;
-    letter-spacing: 5px;
-    font-size: 0.8rem;
+    letter-spacing: 4px;
+    font-size: 0.85rem;
 }
 
-/* --- 3. CORPORATE NAVIGATION BAR --- */
+/* --- 2. LUXURY NAVIGATION BAR --- */
 .div_menu {
-    padding: 35px 8%;
+    padding: 30px 8%;
     background: #0a1a2b;
     width: 100%;
     display: flex;
     justify-content: flex-end;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
 }
 
 .div_menu > a {
     color: #ffffff;
     text-decoration: none;
     font-weight: 700;
-    font-size: 0.85rem;
+    font-size: 0.8rem;
     text-transform: uppercase;
     letter-spacing: 2px;
-    border: 1px solid rgba(255,255,255,0.3);
-    padding: 12px 35px;
     transition: all 0.3s ease;
+    border: 1px solid rgba(255,255,255,0.3);
+    padding: 10px 25px;
 }
 
 .div_menu a:hover {
     background-color: #ffffff;
     color: #0a1a2b;
-    transform: translateY(-2px);
+    border-color: #ffffff;
 }
 
-/* --- 4. GALLERY: EXTREME FLOAT INTERACTION --- */
+/* --- 3. ENHANCED HOVER GALLERY --- */
 .div_m {
     display: flex;
-    padding: 140px 8%;
-    gap: 60px;
+    padding: 100px 8%;
+    gap: 50px;
+    background: transparent;
 }
 
 .div_s {
     flex: 1;
-    transition: z-index 0.3s;
+    background: transparent;
 }
 
 .img_p {
     width: 100%;
-    aspect-ratio: 4 / 5;
+    aspect-ratio: 4 / 5; /* More elegant vertical ratio */
     object-fit: cover;
-    /* Use a sharp, expensive-feeling transition curve */
-    transition: all 0.7s cubic-bezier(0.19, 1, 0.22, 1); 
-    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    background-color: #fff; /* Border effect background */
+    padding: 0;
+    border: none;
+    /* Smooth lift-up timing */
+    transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94); 
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
 }
 
-/* THE EXTREME FLOAT EFFECT (-45px) */
+/* PRONOUNCED HOVER EFFECT */
 .div_s:hover .img_p {
-    transform: translateY(-45px) scale(1.06); 
-    box-shadow: 0 60px 120px rgba(0,0,0,0.35); /* Deep Cinematic Shadow */
-    filter: contrast(1.05) brightness(1.05);
+    /* Stronger lift (-25px) and slight scale */
+    transform: translateY(-25px) scale(1.03); 
+    /* Deep, cinematic shadow for 3D depth */
+    box-shadow: 0 40px 70px rgba(0,0,0,0.25); 
+    filter: brightness(1.05);
 }
 
 .div_s p {
-    margin-top: 35px;
+    margin-top: 25px;
     font-weight: 900;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
+    color: #0a1a2b;
     text-transform: uppercase;
     letter-spacing: 1px;
-    color: #0a1a2b;
 }
 
-/* --- 5. AUTHOR PROFILE PAGE (author.html) --- */
+/* --- 4. ABOUT PAGE (author.html) --- */
 .p_menu {
     display: flex;
     max-width: 1400px;
     margin: 0 auto;
-    padding: 140px 8%;
+    padding: 120px 8%;
     gap: 120px;
-    align-items: center; /* Vertical Center Align */
+    align-items: flex-start;
 }
+
+.left { flex: 1.2; }
 
 .left h1 {
-    font-size: 5.5rem;
+    font-size: 5rem;
     font-weight: 900;
-    letter-spacing: -4px;
-    line-height: 0.95;
-    margin-bottom: 20px;
-}
-
-/* The "Dublin" Blue Call-out Box */
-.left p {
-    display: inline-block;
-    background-color: #0a1a2b;
-    color: #ffffff !important;
-    padding: 14px 28px;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 3px;
-    font-size: 0.85rem;
-    margin-top: 25px;
-    border-radius: 0; /* Sharp corporate edges */
-}
-
-/* CIRCULAR PROFILE IMAGE SETTINGS */
-.right {
-    flex: 1;
-    display: flex;
-    justify-content: center;
+    letter-spacing: -3px;
+    line-height: 1;
+    margin-bottom: 30px;
 }
 
 .right img {
-    width: 480px;
-    height: 480px;
-    object-fit: cover;
-    border-radius: 50%; /* Perfect Circle */
-    border: 15px solid #ffffff; /* Thick Gallery Frame */
-    box-shadow: 0 40px 80px rgba(0,0,0,0.15);
-    transition: transform 0.6s ease;
+    width: 100%;
+    max-width: 500px;
+    border-left: 20px solid #0a1a2b;
+    box-shadow: 40px 40px 0px rgba(197, 163, 104, 0.1); /* Gold shadow block */
 }
 
-.right img:hover {
-    transform: rotate(2deg) scale(1.02);
-}
-
-/* Bio Content List */
 .menu li {
     list-style: none;
-    margin-top: 50px;
-    border-top: 2px solid #0a1a2b;
-    padding-top: 25px;
+    margin-bottom: 50px;
+    border-top: 1px solid rgba(0,0,0,0.1);
+    padding-top: 20px;
 }
 
 .menu li p {
-    background-color: transparent !important; /* Reset for general text */
-    color: #334155 !important;
-    padding: 0;
-    text-transform: none;
-    letter-spacing: 0;
-    font-size: 1.2rem;
+    font-size: 1.15rem;
+    color: #334155;
     line-height: 1.8;
 }
 
-/* --- 6. FOOTER --- */
+/* --- FOOTER --- */
 footer {
     background: #0a1a2b;
-    padding: 120px 8% 60px 8%;
+    padding: 100px 8%;
+    text-align: left;
 }
 
 footer p {
-    background: transparent !important;
-    color: rgba(255,255,255,0.4) !important;
-    letter-spacing: 8px;
+    color: rgba(255,255,255,0.3);
     font-size: 0.7rem;
-    text-align: left;
     text-transform: uppercase;
+    letter-spacing: 5px;
 }
 
-/* --- 7. RESPONSIVE DESIGN --- */
-@media (max-width: 1200px) {
-    .p_menu { gap: 60px; }
-    .left h1 { font-size: 4rem; }
-    .right img { width: 350px; height: 350px; }
-}
-
-@media (max-width: 900px) {
-    .p_menu { flex-direction: column; text-align: center; }
-    .div_m { flex-direction: column; padding: 60px 8%; }
-    .div_s { width: 100%; margin: 40px 0; }
-    .right img { width: 300px; height: 300px; }
-    #p_profile { height: 60vh; }
+/* --- RESPONSIVE --- */
+@media (max-width: 1000px) {
+    .p_menu { flex-direction: column; gap: 60px; text-align: center; }
+    .div_m { flex-direction: column; padding: 50px 8%; }
+    .div_s { width: 100%; margin: 30px 0; }
 }
