@@ -108,4 +108,84 @@ body {
 .div_s p {
     margin-top: 30px;
     font-weight: 900;
-    font-size
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* --- 3. AUTHOR PAGE (author.html) UPGRADE --- */
+
+.p_menu {
+    display: flex;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 120px 8%;
+    gap: 120px;
+    align-items: center;
+}
+
+/* DUBLIN BLUE BOX IMPLEMENTATION */
+.left p {
+    display: inline-block; /* Makes the background wrap the text */
+    background-color: #0a1a2b; /* Francisco Navy */
+    color: #ffffff !important;
+    padding: 12px 24px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.9rem;
+    margin-top: 30px;
+    border-radius: 2px;
+}
+
+.left h1 {
+    font-size: 5rem;
+    font-weight: 900;
+    letter-spacing: -3px;
+    line-height: 1;
+}
+
+/* CIRCULAR PROFILE IMAGE */
+.right img {
+    width: 450px;
+    height: 450px;
+    object-fit: cover;
+    border-radius: 50%; /* Perfect Circle */
+    border: 15px solid #ffffff; /* White Gallery Frame */
+    box-shadow: 0 30px 60px rgba(0,0,0,0.15);
+}
+
+.menu li {
+    list-style: none;
+    margin-top: 50px;
+    border-top: 2px solid #0a1a2b;
+    padding-top: 20px;
+}
+
+.menu li p {
+    background-color: transparent !important; /* Resetting the box style for list */
+    color: #334155 !important;
+    padding: 0;
+    text-transform: none;
+    letter-spacing: 0;
+    font-size: 1.2rem;
+}
+
+/* --- FOOTER --- */
+footer {
+    background: #0a1a2b;
+    padding: 100px 8%;
+}
+
+footer p {
+    color: rgba(255,255,255,0.4);
+    letter-spacing: 6px;
+    font-size: 0.75rem;
+}
+
+/* Responsive */
+@media (max-width: 1100px) {
+    .p_menu { flex-direction: column; text-align: center; }
+    .div_m { flex-direction: column; }
+    .right img { width: 300px; height: 300px; }
+}
