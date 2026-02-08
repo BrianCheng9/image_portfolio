@@ -1,118 +1,162 @@
-*{background-color: #D6CFB4; 
-    font-family: Schoolbell;
-    color: #222831;    
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+    background-color: #F7F3F0; 
+    font-family: 'Inter', 'Segoe UI', sans-serif; 
+    color: #1a1a1a;
+    -webkit-font-smoothing: antialiased;
 }
 
-h1{font-weight: 100;}
 
-.div_p{margin-top: 5px; 
+h1 {
+    font-family: 'ZCOOL QingKe HuangYou', sans-serif;
+    font-weight: 400;
+    font-size: 3.5rem;
+    letter-spacing: 2px;
+    margin: 20px 0;
+    text-transform: uppercase;
+}
+
+
+.div_p {
+    padding: 60px 5% 40px 5%;
     text-align: right;
-    font-size:smaller;
 }
 
-.div_menu {
-    display: inline-block;
-    border-radius: 10%;
-    width: 145px;
-    height: 20px;
-}
-
-.div_menu>a{
-    background-color:darkcyan;
-    color: #F1F0E8;
-    font-size: 13px;
-    text-decoration: none;
-}
-.div_menu a:hover{
-    background-color: #31363F;
+.div_p p {
+    font-family: 'Schoolbell', cursive;
+    font-size: 1.1rem;
+    color: #666;
 }
 
 #p_profile {
     width: 100%;
-    height: auto;
-    padding: 0px 0px;
+    max-height: 500px;
+    object-fit: cover; 
+    border-radius: 4px;
+    margin-bottom: 30px;
+    filter: brightness(0.95);
+    transition: filter 0.5s ease;
 }
 
-.div_m{height: auto; width: 100%;
-    display: flex;}
-
-.div_s{height: auto; width: 30%;
-    font-size: smaller;
-    text-align: right;
-    margin: 20px;
+#p_profile:hover {
+    filter: brightness(1);
 }
 
-.img_p{ height: auto; width: 100%;
-    border: 3px dashed #31363F;
-    padding: 5px;
+
+.div_menu {
+    display: inline-block;
+    margin-top: 20px;
 }
 
-.p_menu{
+.div_menu > a {
+    display: inline-block;
+    background-color: #1a1a1a; 
+    color: #fff;
+    font-size: 14px;
+    padding: 12px 25px;
+    text-decoration: none;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    border: 1px solid #1a1a1a;
+}
+
+.div_menu a:hover {
+    background-color: transparent;
+    color: #1a1a1a;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid #e0e0e0;
+    margin-top: 40px;
+}
+
+
+.div_m {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 5%;
+    background-color: transparent;
+}
+
+.div_s {
+    flex: 1;
+    margin: 15px;
+    background-color: transparent;
+    text-align: left; 
+}
+
+
+.img_p {
     width: 100%;
-    margin-top: 50px;
+    height: auto;
+    aspect-ratio: 4 / 3; /
+    object-fit: cover;
+    border: none; 
+    padding: 0;
+    transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1), box-shadow 0.6s ease;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
 }
 
-.left{
-    float: left;
-    width: 30%;
-    margin-top: 30%;
-}
-.left>h1{
-    font-size: 30px;
+.div_s:hover .img_p {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.12);
 }
 
-.left>h2{
-    font-size: 20px;
-    font-weight: 100;
-}
-.left>p{font-size: 14px}
 
-.right{
-    float: right;
-    width: 60%;
+.div_s p {
+    margin-top: 15px;
+    font-size: 13px;
+    font-weight: 500;
+    color: #444;
+    letter-spacing: 0.5px;
+    background-color: transparent;
+}
+
+
+footer {
+    padding: 80px 0 40px 0;
+}
+
+footer p {
+    background-color: transparent !important; 
+    color: #999;
+    font-size: 12px;
     text-align: center;
-}
-
-.right>img{
-    width: 50%;
-    height: 50%;
-    border-radius: 50%;
-}
-
-.right ul{
-    text-align: left;
-    font-weight: 600;
+    letter-spacing: 2px;
 }
 
 
-.right p{
-    font-weight: 100;
-}
-
-
-footer p{
-    clear: both;
-    text-align: center;
-    margin-top: 100px;
-    background-color: cadetblue;
-
+@media (max-width: 900px) {
+    .div_m {
+        flex-wrap: wrap;
+    }
+    .div_s {
+        flex: 0 0 45%; /
+    }
 }
 
 @media (max-width: 680px) {
     .div_m {
-        flex-direction: column; 
-        align-items: center; 
+        flex-direction: column;
+        align-items: center;
+        padding: 0 20px;
     }
 
     .div_s {
-        width: 90%; 
-        text-align: center; 
-        margin: 20px 0; 
+        width: 100%;
+        margin: 20px 0;
     }
 
-
-    .div_menu {
-        width: 100%; 
-        text-align: right; 
+    h1 {
+        font-size: 2.5rem;
+    }
+    
+    .div_p {
+        text-align: center;
     }
 }
