@@ -1,4 +1,4 @@
-/* --- EXECUTIVE PORTFOLIO: UNIFIED STYLE --- */
+/* --- FRANCISCO PARTNERS EXECUTIVE STYLE (V3 - THE FINAL) --- */
 
 * {
     margin: 0;
@@ -7,19 +7,19 @@
     -webkit-font-smoothing: antialiased;
 }
 
-/* 統一背景：使用香檳亞麻色，增加高級質感 */
+/* 1. Global Linen Background for Premium Feel */
 body {
     background-color: #EBE8E2; 
     font-family: 'Inter', -apple-system, sans-serif;
-    color: #0a1a2b; /* Francisco Navy */
+    color: #002D54; /* Exact Francisco Navy */
     line-height: 1.6;
 }
 
-/* --- 首頁 Hero 區域 (index.html) --- */
+/* --- HERO SECTION: FULL-WIDTH --- */
 .div_p {
     padding: 0;
     position: relative;
-    background-color: #0a1a2b;
+    background-color: #002D54;
 }
 
 #p_profile {
@@ -46,17 +46,18 @@ body {
     position: absolute;
     top: 40px;
     left: 8%;
-    color: #c5a368; 
+    color: #c5a368; /* Corporate Gold */
     font-weight: 800;
     text-transform: uppercase;
     letter-spacing: 5px;
     font-size: 0.8rem;
+    background: transparent !important; /* Reset for Hero p */
 }
 
-/* --- 導覽列 --- */
+/* --- NAVIGATION BAR --- */
 .div_menu {
     padding: 35px 8%;
-    background: #0a1a2b; /* Francisco Navy */
+    background: #002D54; 
     width: 100%;
     display: flex;
     justify-content: flex-end;
@@ -76,12 +77,13 @@ body {
 
 .div_menu a:hover {
     background-color: #ffffff;
-    color: #0a1a2b;
+    color: #002D54;
 }
 
-/* --- 畫廊：強力縮放與懸浮 --- */
+/* --- GALLERY: ORIGINAL RATIO + EXTREME FLOAT --- */
 .div_m {
     display: flex;
+    align-items: flex-start; /* Important for mixed height photos */
     padding: 150px 8% 50px 8%;
     gap: 60px;
 }
@@ -93,36 +95,41 @@ body {
 
 .img_p {
     width: 100%;
-    aspect-ratio: 4 / 5;
-    object-fit: cover;
+    height: auto; /* RESPECT ORIGINAL PROPORTIONS */
+    display: block;
     transition: transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.6s ease;
     box-shadow: 0 10px 30px rgba(0,0,0,0.1);
 }
 
+/* EXTREME FLOAT HOVER */
 .div_s:hover { z-index: 10; }
 
 .div_s:hover .img_p {
-    transform: translateY(-50px) scale(1.15); /* 強力上浮 + 變大 */
+    transform: translateY(-50px) scale(1.15); 
     box-shadow: 0 70px 100px rgba(0,0,0,0.4); 
 }
 
+/* RESTORED: THE BLUE ANNOTATION (左側藍色小標註) */
 .div_s p {
     margin-top: 40px;
     font-weight: 900;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     text-transform: uppercase;
-    color: #0a1a2b;
+    color: #002D54;
+    border-left: 5px solid #002D54; /* The small blue bar you liked */
+    padding-left: 15px;
+    letter-spacing: 1px;
 }
 
-/* --- 攝影師介紹頁面 (author.html) 專屬樣式 --- */
+/* --- AUTHOR PAGE (author.html) --- */
 
 .p_menu {
     display: flex;
     max-width: 1400px;
     margin: 0 auto;
-    padding: 120px 8%;
-    gap: 100px;
-    align-items: center; /* 垂直置中 */
+    padding: 140px 8%;
+    gap: 120px;
+    align-items: center;
 }
 
 .left { flex: 1.3; }
@@ -130,7 +137,7 @@ body {
 .left h2 {
     font-family: 'Schoolbell', cursive;
     font-size: 1.8rem;
-    color: #c5a368; /* 改用金金色 */
+    color: #c5a368; 
     margin-bottom: 5px;
 }
 
@@ -139,7 +146,7 @@ body {
     display: block;
     font-size: 3rem !important;
     font-weight: 900;
-    color: #0a1a2b;
+    color: #002D54;
     letter-spacing: -2px;
 }
 
@@ -151,10 +158,10 @@ body {
     text-transform: uppercase;
 }
 
-/* Dublin 藍色標籤：使用 Francisco 深藍色 */
+/* Location Call-out Tag */
 .left p {
     display: inline-block;
-    background-color: #0a1a2b !important; /* Francisco Navy */
+    background-color: #002D54 !important; 
     color: #ffffff !important;
     padding: 15px 30px;
     font-weight: 700;
@@ -162,64 +169,57 @@ body {
     letter-spacing: 3px;
     font-size: 0.9rem;
     margin-top: 20px;
+    border-left: none !important; /* No sidebar line here */
 }
 
+/* Profile Image: Perfect Circle */
 .right { flex: 1; display: flex; justify-content: center; }
 
-/* 圓形照片與高級邊框 */
 .right img {
     width: 450px;
     height: 450px;
     object-fit: cover;
-    border-radius: 50%; /* 圓形 */
-    border: 15px solid #ffffff; /* 白色畫框感 */
+    border-radius: 50%; 
+    border: 15px solid #ffffff; 
     box-shadow: 0 40px 80px rgba(0,0,0,0.15);
-    transition: transform 0.5s ease;
 }
-
-.right img:hover { transform: scale(1.05) rotate(2deg); }
-
-/* 下方清單優化 */
-.menu { margin-top: 50px; padding-left: 0; }
 
 .menu li {
     list-style: none;
-    border-top: 2px solid #0a1a2b;
-    padding-top: 20px;
+    border-top: 2px solid #002D54;
+    padding-top: 25px;
     margin-bottom: 40px;
     font-weight: 900;
     text-transform: uppercase;
-    font-size: 1.2rem;
 }
 
 .menu li p {
-    background-color: transparent !important; /* 清除標籤樣式 */
+    background-color: transparent !important; 
     color: #475569 !important;
     padding: 0;
     text-transform: none;
     letter-spacing: 0;
-    font-size: 1.1rem;
+    font-size: 1.15rem;
     font-weight: 400;
-    margin-top: 10px;
 }
 
-/* --- 頁腳 --- */
+/* --- FOOTER --- */
 footer {
-    background: #0a1a2b;
+    background: #002D54;
     padding: 100px 8%;
 }
 
 footer p {
     background: transparent !important;
     color: rgba(255,255,255,0.4) !important;
-    text-align: left;
-    letter-spacing: 6px;
+    letter-spacing: 8px;
     font-size: 0.75rem;
 }
 
-/* 響應式佈局 */
+/* Responsive Support */
 @media (max-width: 1100px) {
     .p_menu { flex-direction: column; text-align: center; }
     .div_m { flex-direction: column; }
     .right img { width: 300px; height: 300px; }
+    .div_s p { border-left: none; border-bottom: 3px solid #002D54; padding-left: 0; padding-bottom: 10px; }
 }
