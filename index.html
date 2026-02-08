@@ -1,8 +1,5 @@
-/* PROJECT: BRIAN JM PHOTOGRAPHY PORTFOLIO (EXECUTIVE EDITION)
-   STYLE: FRANCISCO PARTNERS INSPIRED / HIGH-FLOAT INTERACTION
-*/
+/* --- BRIAN JM PHOTOGRAPHY: ULTIMATE IMPACT STYLE --- */
 
-/* --- 1. GLOBAL RESET & FOUNDATION --- */
 * {
     margin: 0;
     padding: 0;
@@ -11,18 +8,15 @@
 }
 
 body {
-    /* Premium Linen Texture Background */
-    background-color: #EBE8E2; 
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-    color: #0a1a2b; /* Francisco Navy */
+    background-color: #EBE8E2; /* Textured Linen Background */
+    font-family: 'Inter', -apple-system, sans-serif;
+    color: #0a1a2b;
     line-height: 1.6;
-    overflow-x: hidden;
 }
 
-/* --- 2. FULL-BLEED HERO SECTION (index.html) --- */
+/* --- 1. FULL-WIDTH HERO SECTION --- */
 .div_p {
     padding: 0;
-    text-align: left;
     position: relative;
     background-color: #0a1a2b;
 }
@@ -32,7 +26,7 @@ body {
     height: 90vh;
     object-fit: cover;
     display: block;
-    filter: brightness(0.65); /* Darker overlay for text readability */
+    filter: brightness(0.65); 
 }
 
 .div_p h1 {
@@ -47,19 +41,18 @@ body {
     text-shadow: 0 10px 50px rgba(0,0,0,0.5);
 }
 
-/* Subtitle on Hero Image */
 .div_p p {
     position: absolute;
     top: 40px;
     left: 8%;
-    color: #c5a368; /* Executive Gold Accent */
+    color: #c5a368; 
     font-weight: 800;
     text-transform: uppercase;
     letter-spacing: 5px;
     font-size: 0.8rem;
 }
 
-/* --- 3. CORPORATE NAVIGATION BAR --- */
+/* --- 2. NAVIGATION --- */
 .div_menu {
     padding: 35px 8%;
     background: #0a1a2b;
@@ -77,149 +70,47 @@ body {
     letter-spacing: 2px;
     border: 1px solid rgba(255,255,255,0.3);
     padding: 12px 35px;
-    transition: all 0.3s ease;
 }
 
 .div_menu a:hover {
     background-color: #ffffff;
     color: #0a1a2b;
-    transform: translateY(-2px);
 }
 
-/* --- 4. GALLERY: EXTREME FLOAT INTERACTION --- */
+/* --- 3. GALLERY: MASSIVE FLOAT & SCALE (核心優化) --- */
 .div_m {
     display: flex;
-    padding: 140px 8%;
+    padding: 150px 8%; /* 增加間距防止圖片上浮後遮擋上方 */
     gap: 60px;
 }
 
 .div_s {
     flex: 1;
-    transition: z-index 0.3s;
+    /* 確保上浮時不會被旁邊的圖片壓住層級 */
+    position: relative;
+    z-index: 1;
 }
 
 .img_p {
     width: 100%;
     aspect-ratio: 4 / 5;
     object-fit: cover;
-    /* Use a sharp, expensive-feeling transition curve */
-    transition: all 0.7s cubic-bezier(0.19, 1, 0.22, 1); 
-    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    /* 這裡使用更強大的動畫曲線 */
+    transition: transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.6s ease;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
 }
 
-/* THE EXTREME FLOAT EFFECT (-45px) */
+/* 強化的上浮效果 */
+.div_s:hover {
+    z-index: 10; /* 懸浮時置於最頂層 */
+}
+
 .div_s:hover .img_p {
-    transform: translateY(-45px) scale(1.06); 
-    box-shadow: 0 60px 120px rgba(0,0,0,0.35); /* Deep Cinematic Shadow */
-    filter: contrast(1.05) brightness(1.05);
+    /* 力度調大：上浮 50px，同時縮放變大到 1.15 倍 */
+    transform: translateY(-50px) scale(1.15); 
+    /* 增加深邃陰影，強化離地感 */
+    box-shadow: 0 70px 100px rgba(0,0,0,0.4); 
+    /* 刪除變亮效果，保持原圖色彩質感 */
 }
 
-.div_s p {
-    margin-top: 35px;
-    font-weight: 900;
-    font-size: 1.2rem;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    color: #0a1a2b;
-}
-
-/* --- 5. AUTHOR PROFILE PAGE (author.html) --- */
-.p_menu {
-    display: flex;
-    max-width: 1400px;
-    margin: 0 auto;
-    padding: 140px 8%;
-    gap: 120px;
-    align-items: center; /* Vertical Center Align */
-}
-
-.left h1 {
-    font-size: 5.5rem;
-    font-weight: 900;
-    letter-spacing: -4px;
-    line-height: 0.95;
-    margin-bottom: 20px;
-}
-
-/* The "Dublin" Blue Call-out Box */
-.left p {
-    display: inline-block;
-    background-color: #0a1a2b;
-    color: #ffffff !important;
-    padding: 14px 28px;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 3px;
-    font-size: 0.85rem;
-    margin-top: 25px;
-    border-radius: 0; /* Sharp corporate edges */
-}
-
-/* CIRCULAR PROFILE IMAGE SETTINGS */
-.right {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-}
-
-.right img {
-    width: 480px;
-    height: 480px;
-    object-fit: cover;
-    border-radius: 50%; /* Perfect Circle */
-    border: 15px solid #ffffff; /* Thick Gallery Frame */
-    box-shadow: 0 40px 80px rgba(0,0,0,0.15);
-    transition: transform 0.6s ease;
-}
-
-.right img:hover {
-    transform: rotate(2deg) scale(1.02);
-}
-
-/* Bio Content List */
-.menu li {
-    list-style: none;
-    margin-top: 50px;
-    border-top: 2px solid #0a1a2b;
-    padding-top: 25px;
-}
-
-.menu li p {
-    background-color: transparent !important; /* Reset for general text */
-    color: #334155 !important;
-    padding: 0;
-    text-transform: none;
-    letter-spacing: 0;
-    font-size: 1.2rem;
-    line-height: 1.8;
-}
-
-/* --- 6. FOOTER --- */
-footer {
-    background: #0a1a2b;
-    padding: 120px 8% 60px 8%;
-}
-
-footer p {
-    background: transparent !important;
-    color: rgba(255,255,255,0.4) !important;
-    letter-spacing: 8px;
-    font-size: 0.7rem;
-    text-align: left;
-    text-transform: uppercase;
-}
-
-/* --- 7. RESPONSIVE DESIGN --- */
-@media (max-width: 1200px) {
-    .p_menu { gap: 60px; }
-    .left h1 { font-size: 4rem; }
-    .right img { width: 350px; height: 350px; }
-}
-
-@media (max-width: 900px) {
-    .p_menu { flex-direction: column; text-align: center; }
-    .div_m { flex-direction: column; padding: 60px 8%; }
-    .div_s { width: 100%; margin: 40px 0; }
-    .right img { width: 300px; height: 300px; }
-    #p_profile { height: 60vh; }
-}
+.
