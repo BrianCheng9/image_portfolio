@@ -6,158 +6,167 @@
 }
 
 body {
-    background-color: #ffffff;
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-    color: #0a1a2b; /* Deep Navy */
+    /* High-quality textured background (Very light cool grey) */
+    background-color: #F2F4F7; 
+    font-family: 'Inter', -apple-system, sans-serif;
+    color: #0a1a2b;
     line-height: 1.6;
 }
 
-/* --- 1. FULL-WIDTH HERO SECTION (The "La Tong" effect) --- */
+/* --- 1. FULL-WIDTH HERO SECTION --- */
 .div_p {
-    padding: 0; /* Remove padding to let image bleed to edges */
+    padding: 0;
     text-align: left;
     position: relative;
+    background-color: #0a1a2b; /* Dark base for transition */
 }
 
 #p_profile {
     width: 100%;
-    height: 85vh; /* Covers 85% of screen height */
-    object-fit: cover; /* Prevents stretching */
+    height: 90vh;
+    object-fit: cover;
     display: block;
+    /* Subtle darken to make overlay text readable */
+    filter: brightness(0.75); 
 }
 
-/* Move the Title/Location over the image or right below it */
 .div_p h1 {
     position: absolute;
-    bottom: 50px;
-    left: 5%;
-    color: white;
-    font-size: clamp(3rem, 10vw, 6rem);
-    font-weight: 800;
-    letter-spacing: -2px;
-    text-transform: none; /* Corporate style uses Title Case usually */
-    text-shadow: 0 4px 20px rgba(0,0,0,0.3);
+    bottom: 80px;
+    left: 8%;
+    color: #ffffff;
+    font-size: clamp(3.5rem, 12vw, 7rem);
+    font-weight: 900;
+    letter-spacing: -3px;
+    line-height: 0.9;
+    text-shadow: 0 10px 30px rgba(0,0,0,0.5);
 }
 
 .div_p p {
     position: absolute;
-    top: 30px;
-    left: 5%;
-    color: white;
-    font-weight: 600;
+    top: 40px;
+    left: 8%;
+    color: #c5a368; /* Executive Gold */
+    font-weight: 800;
     text-transform: uppercase;
-    letter-spacing: 2px;
-    font-size: 0.8rem;
+    letter-spacing: 4px;
+    font-size: 0.85rem;
 }
 
-/* --- 2. MINIMALIST NAVIGATION --- */
+/* --- 2. LUXURY NAVIGATION BAR --- */
 .div_menu {
-    padding: 40px 5%;
-    background: #0a1a2b; /* Navy Bar */
+    padding: 30px 8%;
+    background: #0a1a2b;
     width: 100%;
     display: flex;
     justify-content: flex-end;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
 }
 
 .div_menu > a {
-    color: #c5a368; /* Subtle Gold Accent */
+    color: #ffffff;
     text-decoration: none;
     font-weight: 700;
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     text-transform: uppercase;
-    letter-spacing: 1px;
-    transition: color 0.3s ease;
+    letter-spacing: 2px;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255,255,255,0.3);
+    padding: 10px 25px;
 }
 
 .div_menu a:hover {
-    color: #ffffff;
+    background-color: #ffffff;
+    color: #0a1a2b;
+    border-color: #ffffff;
 }
 
-/* --- 3. ARCHITECTURAL GALLERY GRID --- */
+/* --- 3. ENHANCED HOVER GALLERY --- */
 .div_m {
     display: flex;
-    padding: 80px 5%;
-    gap: 40px;
+    padding: 100px 8%;
+    gap: 50px;
+    background: transparent;
 }
 
 .div_s {
     flex: 1;
+    background: transparent;
 }
 
 .img_p {
     width: 100%;
-    aspect-ratio: 1 / 1; /* Francisco Style uses square or consistent grids */
+    aspect-ratio: 4 / 5; /* More elegant vertical ratio */
     object-fit: cover;
-    filter: grayscale(20%); /* Artistic corporate look */
-    transition: filter 0.5s ease, transform 0.5s ease;
+    background-color: #fff; /* Border effect background */
+    padding: 0;
+    border: none;
+    /* Smooth lift-up timing */
+    transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94); 
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
 }
 
+/* PRONOUNCED HOVER EFFECT */
 .div_s:hover .img_p {
-    filter: grayscale(0%);
-    transform: scale(1.02);
+    /* Stronger lift (-25px) and slight scale */
+    transform: translateY(-25px) scale(1.03); 
+    /* Deep, cinematic shadow for 3D depth */
+    box-shadow: 0 40px 70px rgba(0,0,0,0.25); 
+    filter: brightness(1.05);
 }
 
 .div_s p {
-    margin-top: 20px;
-    font-weight: 800;
-    font-size: 1rem;
+    margin-top: 25px;
+    font-weight: 900;
+    font-size: 1.1rem;
     color: #0a1a2b;
-    border-bottom: 1px solid #eee;
-    padding-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
-/* --- 4. ABOUT PAGE (author.html) FORMATTING --- */
+/* --- 4. ABOUT PAGE (author.html) --- */
 .p_menu {
     display: flex;
     max-width: 1400px;
     margin: 0 auto;
-    padding: 100px 5%;
-    gap: 100px;
-    align-items: center;
+    padding: 120px 8%;
+    gap: 120px;
+    align-items: flex-start;
 }
 
-.left {
-    flex: 1;
-}
+.left { flex: 1.2; }
 
 .left h1 {
-    font-size: 4rem;
-    color: #0a1a2b;
-    margin: 20px 0;
+    font-size: 5rem;
+    font-weight: 900;
+    letter-spacing: -3px;
+    line-height: 1;
+    margin-bottom: 30px;
 }
 
 .right img {
     width: 100%;
     max-width: 500px;
-    border-left: 15px solid #0a1a2b; /* Corporate accent line */
-    padding-left: 0;
+    border-left: 20px solid #0a1a2b;
+    box-shadow: 40px 40px 0px rgba(197, 163, 104, 0.1); /* Gold shadow block */
 }
 
 .menu li {
     list-style: none;
-    margin-bottom: 40px;
+    margin-bottom: 50px;
+    border-top: 1px solid rgba(0,0,0,0.1);
+    padding-top: 20px;
 }
 
 .menu li p {
-    font-size: 1.1rem;
-    color: #444;
+    font-size: 1.15rem;
+    color: #334155;
+    line-height: 1.8;
 }
 
 /* --- FOOTER --- */
 footer {
     background: #0a1a2b;
-    padding: 60px 5%;
-    margin-top: 100px;
-}
-
-footer p {
-    color: #666;
-    font-size: 0.7rem;
-    letter-spacing: 2px;
-}
-
-/* --- RESPONSIVE --- */
-@media (max-width: 900px) {
-    .p_menu { flex-direction: column; }
-    .div_m { flex-direction: column; }
+    padding: 100px 8%;
+    text-align: left;
 }
