@@ -1,4 +1,5 @@
-/* --- Global Reset & Base Styles --- */
+/* --- css style --- */
+
 * {
     margin: 0;
     padding: 0;
@@ -6,225 +7,81 @@
     -webkit-font-smoothing: antialiased;
 }
 
+/* 1. Global Linen Background */
 body {
-    background-color: #F7F3F0; /* Warm gallery white */
-    font-family: 'Inter', sans-serif;
-    color: #1a1a1a;
+    background-color: #EBE8E2; 
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    color: #002D54; /* Francisco Navy */
     line-height: 1.6;
 }
 
-/* --- Typography --- */
-h1 {
-    font-family: 'ZCOOL QingKe HuangYou', sans-serif;
-    font-weight: 400;
-    font-size: clamp(3rem, 8vw, 4.5rem); 
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    line-height: 1.1;
-}
-
-h2 {
-    font-family: 'Schoolbell', cursive;
-    font-weight: 400;
-    color: #888;
-}
-
-/* --- Header Section (index.html) --- */
+/* --- HERO SECTION: FULL-WIDTH (index.html) --- */
 .div_p {
-    padding: 80px 5% 40px 5%;
-    text-align: right;
+    padding: 0;
+    position: relative;
+    background-color: #002D54;
 }
 
 #p_profile {
     width: 100%;
-    max-height: 60vh;
+    height: 90vh;
     object-fit: cover;
-    border-radius: 4px;
-    filter: brightness(0.9);
-    transition: filter 0.5s ease;
+    display: block;
+    filter: brightness(0.6); 
 }
 
-#p_profile:hover { 
-    filter: brightness(1); 
+.div_p h1 {
+    position: absolute;
+    bottom: 80px;
+    left: 8%;
+    color: #ffffff;
+    font-size: clamp(3rem, 10vw, 7rem);
+    font-weight: 900;
+    letter-spacing: -3px;
+    line-height: 0.85;
+    text-shadow: 0 15px 40px rgba(0,0,0,0.4);
 }
 
-/* --- Navigation & Buttons --- */
+.div_p p {
+    position: absolute;
+    top: 40px;
+    left: 8%;
+    color: #c5a368; /* Corporate Gold */
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 0.8rem;
+    background: transparent !important;
+}
+
+/* --- NAVIGATION BAR --- */
 .div_menu {
-    display: inline-block;
-    margin-top: 30px;
+    padding: 30px 8%;
+    background: #002D54; 
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
 }
 
 .div_menu > a {
-    display: inline-block;
-    background-color: #1a1a1a;
-    color: #fff;
-    font-size: 13px;
-    padding: 15px 35px;
+    color: #ffffff;
     text-decoration: none;
-    letter-spacing: 2px;
-    text-transform: uppercase;
     font-weight: 700;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border: 1px solid rgba(255,255,255,0.3);
+    padding: 12px 30px;
     transition: all 0.3s ease;
-    border: 1px solid #1a1a1a;
 }
 
 .div_menu a:hover {
-    background-color: transparent;
-    color: #1a1a1a;
-    transform: translateY(-2px);
+    background-color: #ffffff;
+    color: #002D54;
 }
 
-hr {
-    border: none;
-    border-top: 1px solid #e0e0e0;
-    margin-top: 40px;
-}
-
-/* --- Author Profile Layout (author.html) --- */
-.p_menu {
-    display: flex;
-    max-width: 1200px;
-    margin: 100px auto;
-    padding: 0 5%;
-    gap: 100px;
-    align-items: flex-start;
-}
-
-.left {
-    flex: 1.2;
-}
-
-.left h2 {
-    font-size: 1.8rem;
-    margin-bottom: 0;
-}
-
-.left h2 span {
-    font-family: 'Inter', sans-serif;
-    font-size: 2.2rem;
-    color: #1a1a1a;
-    font-weight: 900;
-    display: block;
-    letter-spacing: -1px;
-}
-
-.left p {
-    font-size: 0.9rem;
-    color: #999;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-    margin-top: 20px;
-}
-
-.right {
-    flex: 1;
-}
-
-/* Profile Image Styling */
-.right img {
-    width: 100%;
-    max-width: 450px;
-    border-radius: 12px;
-    box-shadow: 30px 30px 80px rgba(0,0,0,0.08);
-    margin-bottom: 50px;
-    transition: transform 0.5s ease;
-}
-
-.right img:hover { 
-    transform: scale(1.02); 
-}
-
-/* Profile Details List */
-.menu {
-    list-style: none;
-    padding: 0;
-}
-
-.menu li {
-    font-family: 'Inter', sans-serif;
-    font-weight: 800;
-    font-size: 1.2rem;
-    margin-bottom: 40px;
-    border-top: 1px solid rgba(0,0,0,0.05);
-    padding-top: 20px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-
-.menu li p {
-    font-family: 'Inter', sans-serif;
-    font-weight: 400;
-    font-size: 1rem;
-    text-transform: none;
-    color: #555;
-    margin-top: 10px;
-    line-height: 1.8;
-    letter-spacing: 0;
-}
-
-/* --- Portfolio Grid (index.html) --- */
+/* --- GALLERY: ORIGINAL RATIO RESTORED --- */
 .div_m {
     display: flex;
-    justify-content: space-between;
-    padding: 40px 5%;
-}
-
-.div_s {
-    flex: 1;
-    margin: 20px;
-}
-
-.img_p {
-    width: 100%;
-    aspect-ratio: 4 / 3;
-    object-fit: cover;
-    transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
-    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-}
-
-.div_s:hover .img_p {
-    transform: translateY(-10px);
-    box-shadow: 0 30px 60px rgba(0,0,0,0.15);
-}
-
-/* --- Footer --- */
-footer {
-    padding: 100px 0 60px 0;
-}
-
-footer p {
-    background-color: transparent !important;
-    color: #bbb;
-    font-size: 11px;
-    text-align: center;
-    letter-spacing: 4px;
-    text-transform: uppercase;
-}
-
-/* --- Responsive Design --- */
-@media (max-width: 900px) {
-    .p_menu {
-        flex-direction: column;
-        gap: 50px;
-        text-align: center;
-    }
-    
-    .div_m { 
-        flex-wrap: wrap; 
-    }
-    
-    .div_s { 
-        flex: 0 0 45%; 
-    }
-}
-
-@media (max-width: 600px) {
-    .div_s { 
-        flex: 0 0 100%; 
-        margin: 20px 0; 
-    }
-    
-    .div_p { 
-        text-align: center; 
-    }
-}
+    align-items: flex-start; /* 讓不同高度的照片頂部對齊 */
+    padding: 150px 8
