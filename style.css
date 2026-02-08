@@ -1,3 +1,5 @@
+/* --- Extreme Executive Portfolio Style --- */
+
 * {
     margin: 0;
     padding: 0;
@@ -5,20 +7,20 @@
     -webkit-font-smoothing: antialiased;
 }
 
+/* 1. Global Theme - Using a more textured 'Linen' color for depth */
 body {
-    /* High-quality textured background (Very light cool grey) */
-    background-color: #F2F4F7; 
+    background-color: #EBE8E2; 
     font-family: 'Inter', -apple-system, sans-serif;
     color: #0a1a2b;
     line-height: 1.6;
 }
 
-/* --- 1. FULL-WIDTH HERO SECTION --- */
+/* --- HERO SECTION --- */
 .div_p {
     padding: 0;
     text-align: left;
     position: relative;
-    background-color: #0a1a2b; /* Dark base for transition */
+    background-color: #0a1a2b;
 }
 
 #p_profile {
@@ -26,8 +28,7 @@ body {
     height: 90vh;
     object-fit: cover;
     display: block;
-    /* Subtle darken to make overlay text readable */
-    filter: brightness(0.75); 
+    filter: brightness(0.7); 
 }
 
 .div_p h1 {
@@ -39,28 +40,27 @@ body {
     font-weight: 900;
     letter-spacing: -3px;
     line-height: 0.9;
-    text-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    text-shadow: 0 10px 40px rgba(0,0,0,0.6);
 }
 
 .div_p p {
     position: absolute;
     top: 40px;
     left: 8%;
-    color: #c5a368; /* Executive Gold */
+    color: #c5a368; 
     font-weight: 800;
     text-transform: uppercase;
     letter-spacing: 4px;
     font-size: 0.85rem;
 }
 
-/* --- 2. LUXURY NAVIGATION BAR --- */
+/* --- NAVIGATION --- */
 .div_menu {
     padding: 30px 8%;
     background: #0a1a2b;
     width: 100%;
     display: flex;
     justify-content: flex-end;
-    border-bottom: 1px solid rgba(255,255,255,0.1);
 }
 
 .div_menu > a {
@@ -70,103 +70,42 @@ body {
     font-size: 0.8rem;
     text-transform: uppercase;
     letter-spacing: 2px;
+    border: 1px solid rgba(255,255,255,0.4);
+    padding: 12px 30px;
     transition: all 0.3s ease;
-    border: 1px solid rgba(255,255,255,0.3);
-    padding: 10px 25px;
 }
 
 .div_menu a:hover {
     background-color: #ffffff;
     color: #0a1a2b;
-    border-color: #ffffff;
 }
 
-/* --- 3. ENHANCED HOVER GALLERY --- */
+/* --- 2. GALLERY: EXTREME FLOAT EFFECT --- */
 .div_m {
     display: flex;
-    padding: 100px 8%;
-    gap: 50px;
-    background: transparent;
+    padding: 120px 8%;
+    gap: 60px;
 }
 
 .div_s {
     flex: 1;
-    background: transparent;
 }
 
 .img_p {
     width: 100%;
-    aspect-ratio: 4 / 5; /* More elegant vertical ratio */
+    aspect-ratio: 4 / 5;
     object-fit: cover;
-    background-color: #fff; /* Border effect background */
-    padding: 0;
-    border: none;
-    /* Smooth lift-up timing */
-    transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94); 
-    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: all 0.6s cubic-bezier(0.22, 1, 0.36, 1); /* Ultra smooth curve */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
 }
 
-/* PRONOUNCED HOVER EFFECT */
+/* EXTREME LIFT (-45px) */
 .div_s:hover .img_p {
-    /* Stronger lift (-25px) and slight scale */
-    transform: translateY(-25px) scale(1.03); 
-    /* Deep, cinematic shadow for 3D depth */
-    box-shadow: 0 40px 70px rgba(0,0,0,0.25); 
-    filter: brightness(1.05);
+    transform: translateY(-45px) scale(1.05); 
+    box-shadow: 0 60px 100px rgba(0,0,0,0.35); /* Massive, soft cinematic shadow */
 }
 
 .div_s p {
-    margin-top: 25px;
+    margin-top: 30px;
     font-weight: 900;
-    font-size: 1.1rem;
-    color: #0a1a2b;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-
-/* --- 4. ABOUT PAGE (author.html) --- */
-.p_menu {
-    display: flex;
-    max-width: 1400px;
-    margin: 0 auto;
-    padding: 120px 8%;
-    gap: 120px;
-    align-items: flex-start;
-}
-
-.left { flex: 1.2; }
-
-.left h1 {
-    font-size: 5rem;
-    font-weight: 900;
-    letter-spacing: -3px;
-    line-height: 1;
-    margin-bottom: 30px;
-}
-
-.right img {
-    width: 100%;
-    max-width: 500px;
-    border-left: 20px solid #0a1a2b;
-    box-shadow: 40px 40px 0px rgba(197, 163, 104, 0.1); /* Gold shadow block */
-}
-
-.menu li {
-    list-style: none;
-    margin-bottom: 50px;
-    border-top: 1px solid rgba(0,0,0,0.1);
-    padding-top: 20px;
-}
-
-.menu li p {
-    font-size: 1.15rem;
-    color: #334155;
-    line-height: 1.8;
-}
-
-/* --- FOOTER --- */
-footer {
-    background: #0a1a2b;
-    padding: 100px 8%;
-    text-align: left;
-}
+    font-size
